@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4cca63;
+    --secondary: #aaa;
+    --bg: #eee;
+    --roundness: 10px;
+    --gap: 20px;
+}
+
+body {
+    padding: var(--gap);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--bg);
+    border-radius: var(--roundness);
+    margin-bottom: var(--gap);
+}
+
+header p {
+    color: var(--secondary);
+    line-height: 30px;
+}
+
+#reaction-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#reaction-container h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#reaction-container input {
+    border: none;
+    height: 40px;
+    padding: 0 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: var(--bg);
+    transition: background .2s;
+}
+
+#reaction-container input:hover {
+    background-color: #f7f7f7;
+}
+
+#reaction-container input:focus {
+    background-color: #f7f7f7;
+    outline-color: var(--primary);
+    outline-style: solid;
+    outline-width: 3px;
+}
+
+#reaction {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: var(--gap);
+    margin-top: var(--gap);
+}
+
+#reaction .cards {
+    width: 100%;
+    border-radius: var(--roundness);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    transition: .4s;
+    position: relative;
+    border: 2px solid var(--bg);
+}
+
+#reaction .cards:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 30px #0003;
+    background-color: #fff;
+    /* transform: scale(1.07); */
+    transition: .1s;
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-10px);
+}
+
+#reaction a {
+    text-decoration: none;
+    color: black;
+}
+
+#reaction .cards .desc p:first-child {
+    color: var(--secondary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+}
+
+#reaction .cards .desc p:last-child {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#reaction .cards:hover .desc p:first-child {
+    color: #fff;
+    transition: .1s;
+}
+
+#reaction .cards .desc {
+    padding: 10px;
+    text-align: center;
+}
